@@ -1,0 +1,53 @@
+# Package manager
+pip-log.txt
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.development
+
+# DB dump
+*.sql
+
+# Build
+dist/
+build/
+*.pyc
+
+# Test
+test/
+docs/
+
+# Coverage
+coverage/
+
+#  Cache
+.cache/
+
+# Editor based
+.editorconfig
+.vscode/
+.idea/
+.DS_Store
+
+# Configuration
+.aws/credentials
+
+# Miscellanous build file
+Dockerfile*
+.dockerignore
+
+# Temp
+*/temp*
+*/*/temp*
+
+# Git
+.git
+
+
+
+
