@@ -1,20 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"time"
+	"net/http"
 
-	"github.com/johnsosirv/auto-blog/models"
+	"github.com/johnsosirv/auto-blog/controllers"
 )
 
 func main() {
-	news := models.News{
-		ID:    1,
-		Title: "Dollar to Naira",
-		Slug:  "dollar-to-naira",
-		Body:  "Naira crashes to N1000 to $1 dollar",
-		Date:  time.Now(),
-	}
+	controllers.RegisterRoutes()
 
-	fmt.Println(news)
+	http.ListenAndServe(":3000", nil)
 }
