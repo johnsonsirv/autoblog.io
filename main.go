@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/johnsosirv/auto-blog/controllers"
+	"github.com/johnsonsirv/auto-blog/controllers"
 )
 
 func main() {

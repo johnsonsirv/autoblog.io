@@ -1,9 +1,13 @@
 package models
 
-import "time"
+import (
+	"time"
+
+	"github.com/google/uuid"
+)
 
 type News struct {
-	ID    int
+	ID    string
 	Title string
 	Slug  string
 	Body  string
@@ -12,7 +16,6 @@ type News struct {
 
 var (
 	news   []*News
-	nextID = 1
 )
 
 func GetNews() []*News {
@@ -20,10 +23,17 @@ func GetNews() []*News {
 }
 
 func AddNewsItem(n News) (News, error) {
-	n.ID = nextID
-	nextID++
+	n.ID = uuid.NewString()
 
 	news = append(news, &n)
 
 	return n, nil
+}
+
+func GetNewsById(id string) (News, error)  {
+	return News{}, nil
+}
+
+func RemoveNewsById(id string) (error)  {
+	return nil
 }
